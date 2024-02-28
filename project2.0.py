@@ -56,7 +56,7 @@ def main():
     st.header("Election Results")
     results = election.get_results()
     for result in results:
-        st.table("Name: {result[10]}, Party: {result[10]}, Votes: {result[12]}")
+        st.table(f"Name: {result[0]}, Party: {result[1]}, Votes: {result[2]}")
 
 if __name__ == "__main__":
     main()
