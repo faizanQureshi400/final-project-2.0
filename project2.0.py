@@ -44,13 +44,14 @@ def main():
 
     st.header("Cast Vote")
     vote_options = [candidate.name for candidate in election.candidates]
-    vote_index = st.selectbox("Select Candidate to Vote", vote_options ,"pti,mqm,ppp")
+    vote_index = st.selectbox("Select Candidate to Vote" vote_options )
     
     import time
     st.balloons()
     st.snow()
     if st.button("Cast Vote"):
         election.vote(vote_options.index(vote_index))
+         vote = st.text_input("vote num")
 
     st.header("Election Results")
     results = election.get_results()
