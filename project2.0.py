@@ -54,21 +54,20 @@ def main():
 
     st.header("Cast Vote")
     vote_options = [candidate.name for candidate in election.candidates]
-    vote_index = st.selectbox("Select Candidate to Vote" , vote_options )
+    vote_index = st.selectbox("Select Candidate to Vote", vote_options)
     
-    import time
-    st.balloons()
-    st.snow()
     if st.button("Cast Vote"):
         election.vote(vote_options.index(vote_index))
-         vote = st.text_input("1")
-
-       st.header("Election Results")
+    
+    st.header("Election Results")
     results = election.get_results()
     if results:
-        result_table = [["candidate name", "party name", "votes"]]
+        result_table = [["Candidate Name", "Party Name", "Votes"]]
         for result in results:
             result_table.append(result)
-        st.table(f"Name: {result[0]}, party:  {result[1]} , votes:  {result[2]}")
+        st.table(result_table)
     else:
         st.write("No results available yet.")
+
+if __name__ == "__main__":
+    main()
