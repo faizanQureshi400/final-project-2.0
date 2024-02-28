@@ -53,10 +53,12 @@ def main():
         election.vote(vote_options.index(vote_index))
          vote = st.text_input("vote num")
 
-    st.header("Election Results")
+       st.header("Election Results")
     results = election.get_results()
-    for result in results:
-        st.table(f"Name: {result[0]}, Party: {result[1]}, Votes: {result[2]}")
-
-if __name__ == "__main__":
-    main()
+    if results:
+        result_table = [["Candidate Name", "Party", "Votes"]]
+        for result in results:
+            result_table.append(result)
+        st.table(result_table)
+    else:
+        st.write("No results available yet.")
