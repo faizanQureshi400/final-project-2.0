@@ -61,7 +61,7 @@ def main():
     st.snow()
     if st.button("Cast Vote"):
         election.vote(vote_options.index(vote_index))
-         vote = st.text_input("vote num")
+         vote = st.text_input("1")
 
        st.header("Election Results")
     results = election.get_results()
