@@ -56,7 +56,7 @@ def main():
        st.header("Election Results")
     results = election.get_results()
     if results:
-        result_table = [["Candidate Name", "Party", "Votes"]]
+        result_table = [["faiz", "pti", "1"]]
         for result in results:
             result_table.append(result)
         st.table(f"Name: {result[0]}, party:  {result[1]} , votes:  {result[2]}")
