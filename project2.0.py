@@ -59,6 +59,6 @@ def main():
         result_table = [["Candidate Name", "Party", "Votes"]]
         for result in results:
             result_table.append(result)
-        st.table(result_table)
+        st.table(f"Name: {result[0]}, party:  {result[1]} , votes:  {result[2]}")
     else:
         st.write("No results available yet.")
