@@ -44,7 +44,8 @@ def main():
 
     st.header("Cast Vote")
     vote_options = [candidate.name for candidate in election.candidates]
-    vote_index = st.selectbox("Select Candidate to Vote", vote_options)
+    vote_index = st.selectbox("Select Candidate to Vote", vote_options ,"pti,mqm,ppp")
+    
     import time
     st.balloons()
     st.snow()
