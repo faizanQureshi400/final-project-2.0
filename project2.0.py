@@ -1,4 +1,14 @@
 import streamlit as st
+import random
+import string
+
+st.title("Bano Qabil")
+
+st.sidebar.markdown("""
+    <div style="display: flex; justify-content: center;">
+        <img src="https://banoqabil.pk/media/logo.png" width="200">
+    </div>
+""", unsafe_allow_html=True)
 
 class Candidate:
     def __init__(self, name, party):
